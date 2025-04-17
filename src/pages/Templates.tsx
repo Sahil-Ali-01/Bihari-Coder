@@ -96,12 +96,9 @@ const Templates = () => {
       
       <main className="flex-grow">
         {/* Header */}
-        <div className="bg-gradient-to-r from-coder-purple/10 to-coder-blue/10 dark:from-coder-purple/20 dark:to-coder-blue/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Templates</h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl">
-              Discover ready-to-use, high-quality templates to jumpstart your projects. All templates are well-documented and easily customizable.
-            </p>
+        <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 text-white py-5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-5xl font-extrabold mb-4">Templates</h1>
           </div>
         </div>
         

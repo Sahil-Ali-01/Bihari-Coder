@@ -55,7 +55,7 @@ const Contact = () => {
       <main className="flex-grow">
         {/* Header */}
         <div className="bg-gradient-to-r from-coder-blue/10 to-coder-orange/10 dark:from-coder-blue/20 dark:to-coder-orange/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-5">
             <h2 className="text-3xl md:text-4xl font-bold text-coder-purple">
               🛠️ Want to bring your project idea to life?
             </h2>

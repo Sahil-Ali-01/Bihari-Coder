@@ -1,4 +1,3 @@
-
 import { Github, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -30,19 +29,19 @@ const ProjectCard = ({ title, description, image, difficulty, tags, demoLink, gi
   const difficultyClass = getDifficultyColor(difficulty);
   
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100 dark:border-gray-700">
+    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-100 dark:border-gray-700">
       <div className="md:flex">
         <div className="md:w-1/3">
           <img 
             src={image} 
             alt={title} 
-            className="h-48 md:h-full w-full object-cover"
+            className="h-48 md:h-full w-full object-cover rounded-t-2xl md:rounded-none"
           />
         </div>
         
         <div className="md:w-2/3 p-6">
           <div className="flex justify-between items-start mb-4">
-            <h3 className="text-xl font-bold text-gray-800 dark:text-white">{title}</h3>
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{title}</h3>
             <Badge className={difficultyClass}>
               {difficulty}
             </Badge>

@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { useLocation, useNavigate, Link } from 'react-router-dom';
-import { Menu, X, Home } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState } from "react";
+import { useLocation, useNavigate, Link } from "react-router-dom";
+import { Menu, X, Home } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const NavbarMain = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,10 +14,10 @@ const NavbarMain = () => {
 
   const handleHomeClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    if (location.pathname === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      navigate('/');
+      navigate("/");
     }
     setIsMenuOpen(false); // also close mobile menu if open
   };
@@ -29,7 +29,9 @@ const NavbarMain = () => {
           <div className="flex-shrink-0 flex items-center">
             <a href="/" onClick={handleHomeClick} className="flex items-center">
               <span className="text-coder-blue font-bold text-2xl">&lt;/</span>
-              <span className="text-coder-purple font-bold text-2xl">Bihari</span>
+              <span className="text-coder-purple font-bold text-2xl">
+                Bihari
+              </span>
               <span className="text-coder-blue font-bold text-2xl">Coder</span>
               <span className="text-coder-purple font-bold text-2xl">&gt;</span>
             </a>
@@ -44,16 +46,28 @@ const NavbarMain = () => {
               <Home size={18} className="mr-1" />
               Home
             </a>
-            <Link to="/projects" className="text-gray-600 hover:text-coder-purple font-medium">
+            <Link
+              to="/projects"
+              className="text-gray-600 hover:text-coder-purple font-medium"
+            >
               Projects
             </Link>
-            <Link to="/templates" className="text-gray-600 hover:text-coder-purple font-medium">
+            <Link
+              to="/templates"
+              className="text-gray-600 hover:text-coder-purple font-medium"
+            >
               Templates
             </Link>
-            <Link to="/blog" className="text-gray-600 hover:text-coder-purple font-medium">
+            <Link
+              to="/blog"
+              className="text-gray-600 hover:text-coder-purple font-medium"
+            >
               Blog
             </Link>
-            <Link to="/about" className="text-gray-600 hover:text-coder-purple font-medium">
+            <Link
+              to="/about"
+              className="text-gray-600 hover:text-coder-purple font-medium"
+            >
               About
             </Link>
             <Link to="/contact">
@@ -61,6 +75,15 @@ const NavbarMain = () => {
                 Contact
               </Button>
             </Link>
+            <button className="px-5 py-2 font-semibold text-white rounded-xl shadow-md transform transition duration-300 hover:scale-105 hover:shadow-lg bg-gradient-to-r from-orange-500 via-red-500 to-purple-500 animate-gradient-x">
+              <a
+                href="https://drive.google.com/file/d/1pCuaAgb1-JV3659IWOtg6bQh4F06bwWo/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hire Me 🚀
+              </a>
+            </button>
           </div>
 
           <div className="md:hidden flex items-center">

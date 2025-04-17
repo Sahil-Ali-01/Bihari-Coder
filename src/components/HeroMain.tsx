@@ -1,8 +1,33 @@
+import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const HeroMain = () => {
+  const [email, setEmail] = useState(""); // State to store the email
+  const [error, setError] = useState(""); // State to store error messages
+
+  const handleSubscribe = () => {
+    // Regular expression to validate email format and ensure it ends with @gmail.com
+    const emailRegex = /^[^\s@]+@gmail\.com$/;
+
+    if (!email) {
+      setError("Please enter an email address.");
+      return;
+    }
+
+    if (!emailRegex.test(email)) {
+      setError("Please enter a valid email address ending with @gmail.com.");
+      return;
+    }
+
+    // Replace YOUR_CHANNEL_ID with your actual YouTube channel ID
+    const youtubeSubscribeLink =
+      "https://www.youtube.com/@biharicoder01?sub_confirmation=1";
+    window.open(youtubeSubscribeLink, "_blank");
+    setError(""); // Clear the error after successful subscription
+  };
+
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-white to-coder-lightPurple dark:from-gray-900 dark:to-coder-purple/20">
       {/* Decorative elements */}
@@ -11,14 +36,12 @@ const HeroMain = () => {
         <div className="absolute top-1/3 -left-10 w-72 h-72 bg-coder-blue/10 rounded-full filter blur-3xl animate-pulse-slow"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-5 relative z-10">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-                <span className="text-coder-purple">Bihari</span>{" "}
-                <span className="text-coder-blue">Coder</span>
-              </h1>
+              <span className="text-coder-purple">Bihari</span>{" "}
+              <span className="text-coder-blue">Coder</span>
             </h1>
             <p className="text-gray-600 dark:text-gray-300 text-lg md:text-xl">
               Kickstart your journey with{" "}
@@ -40,24 +63,49 @@ const HeroMain = () => {
               <br />
               Want to build your own dream project? Let’s make it user-friendly
               and{" "}
-              <span className="font-semibold text-coder-purple">awesome</span>
-              <br />
-              <br />
-              <a
-                href="/contact"
-                className="text-coder-blue underline hover:text-coder-purple"
-              >
-                {" "}
-                contact me
-              </a>{" "}
-              anytime!
+              <span className="font-semibold text-coder-purple">awesome.</span>
             </p>
+
+            <div>
+              <p className="text-gray-600 dark:text-gray-300 text-lg md:text-xl mt-6 mb-4">
+                🎀Subscribe to get the latest
+                <span className="font-semibold text-coder-orange">
+                  {" "}
+                  Projects
+                </span>
+                , and
+                <span className="font-semibold text-coder-orange">
+                  {" "}
+                  Tutorials.🎀
+                </span>
+              </p>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault(); // Prevent default form submission behavior
+                  handleSubscribe(); // Call the subscription handler
+                }}
+                className="flex flex-col gap-2 md:justify-start"
+              >
+                <div className="flex items-center gap-4">
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="bg-white dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded-md py-2 px-4 w-full max-w-md text-gray-700 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-coder-blue focus:border-transparent"
+                  />
+                  <Button
+                    type="submit" // Set the button type to "submit"
+                    className="bg-coder-blue hover:bg-coder-blue/90"
+                  >
+                    Subscribe
+                  </Button>
+                </div>
+                {error && <p className="text-red-500 text-sm">{error}</p>}
+              </form>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-10">
-              <Button className="bg-coder-orange hover:bg-coder-orange/90 text-white font-medium py-2 px-6 rounded-md text-lg">
-                <Link to="/projects" className="flex items-center">
-                  Explore Projects <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
               <Button
                 variant="outline"
                 className="border-coder-purple text-coder-purple hover:bg-coder-purple/10 font-medium py-2 px-6 rounded-md text-lg"
@@ -67,7 +115,7 @@ const HeroMain = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  View Portfolio
+                  View My Portfolio
                 </a>
               </Button>
             </div>

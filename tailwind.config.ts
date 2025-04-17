@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate"; // Import the plugin
 
 export default {
   darkMode: ["class"],
@@ -70,18 +71,15 @@ export default {
           orange: "#F97316",
           darkgray: "#333333",
         },
-		
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-	  
 
       // ✅ Custom Keyframes
       keyframes: {
-		
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -110,6 +108,11 @@ export default {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
+        "gradient-x": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
       },
 
       // ✅ Animation Names
@@ -120,9 +123,10 @@ export default {
         "fade-out": "fade-out 0.5s ease-out",
         float: "float 6s ease-in-out infinite",
         "pulse-slow": "pulse-slow 3s ease-in-out infinite",
-        "spin-slow": "spin-slow 3s linear infinite", // ✅ Uses custom keyframe
+        "spin-slow": "spin-slow 3s linear infinite",
+        "gradient-x": "gradient-x 3s ease infinite", // No trailing comma
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate], // Use the imported plugin
 } satisfies Config;
