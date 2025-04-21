@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+@import "@fortawesome/fontawesome-free/css/all.css";
 
 @tailwind base;
 @tailwind components;
@@ -73,7 +75,7 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -89,13 +91,18 @@
   * {
     @apply border-border;
   }
-  
+
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply tracking-tight;
   }
 }
@@ -129,7 +136,7 @@ html {
     background-size: 200% 200%;
     animation: gradient 15s ease infinite;
   }
-  
+
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
@@ -140,5 +147,95 @@ html {
     100% {
       background-position: 0% 50%;
     }
+  }
+}
+/* Scroll Down Arrow Styles */
+#mouse-scroll {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#mouse-scroll.hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-10px);
+  pointer-events: none;
+}
+
+.mouse {
+  width: 24px;
+  height: 40px;
+  border: 2px solid #006064;
+  border-radius: 12px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.mouse-in {
+  width: 6px;
+  height: 10px;
+  background: #006064;
+  border-radius: 3px;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll 1.5s infinite;
+}
+
+.arrows {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.arrows span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #006064;
+  border-bottom: 2px solid #006064;
+  transform: rotate(45deg);
+  margin: 5px auto;
+  animation: bounce 1.5s infinite;
+}
+
+.down-arrow-1 {
+  animation-delay: 0s;
+}
+
+.down-arrow-2 {
+  animation-delay: 0.2s;
+}
+
+.down-arrow-3 {
+  animation-delay: 0.4s;
+}
+
+/* Animations */
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translateY(10px);
   }
 }
