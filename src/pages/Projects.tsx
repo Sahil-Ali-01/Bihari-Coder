@@ -5,6 +5,7 @@ import FooterMain from "@/components/FooterMain";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
+import myImage from "/images/portfolio1.png";
 
 const Projects = () => {
   useEffect(() => {
@@ -111,6 +112,17 @@ const Projects = () => {
         "Social dashboard with real-time analytics and visualization.",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+      difficulty: "Advanced" as const,
+      tags: ["React", "D3.js", "Firebase", "Redux"],
+      category: "Portfolio Projects",
+      demoLink: "https://example.com",
+      githubLink: "https://github.com",
+    },
+    {
+      title: "Sahil Portfolio",
+      description:
+        "My personal portfolio showcasing my projects and skills.",
+        image: myImage,
       difficulty: "Advanced" as const,
       tags: ["React", "D3.js", "Firebase", "Redux"],
       category: "Portfolio Projects",
