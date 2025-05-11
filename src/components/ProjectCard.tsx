@@ -35,7 +35,7 @@ const ProjectCard = ({ title, description, image, difficulty, tags, demoLink, gi
           <img 
             src={image} 
             alt={title} 
-            className="h-48 md:h-full w-full object-cover rounded-t-2xl md:rounded-none"
+            className="h-48 md:h-full w-full object-contain rounded-t-2xl md:rounded-none"
           />
         </div>
         

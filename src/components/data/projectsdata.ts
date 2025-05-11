@@ -75,10 +75,21 @@ const projects = [
       "My personal portfolio showcasing my projects and skills.",
     image: "/images/portfolio1.png",
     difficulty: "Advanced" as const,
-    tags: ["React", "D3.js", "Firebase", "Redux"],
+    tags: ["React", "Next.js", "Node.js", "Tailwind CSS"],
     category: "Portfolio Projects",
-    demoLink: "https://example.com",
+    demoLink: "https://sahil-portfolio-iota.vercel.app/",
     githubLink: "https://github.com",
+  },
+   {
+    title: "Bihari Coder",
+    description:
+      "Bihari Coder – Empowering developers with real-world projects, stunning templates, and practical coding tutorials.",
+    image: "/images/biharicoder.png",
+    difficulty: "Advanced" as const,
+    tags: ["React", "Next.js", "Node.js", "TypeScript", "Tailwind CSS"],
+    category: "Full Stack Projects",
+    demoLink: "https://bihari-coder.vercel.app/",
+    githubLink: "https://github.com/Sahil-Ali-01/Bihari-Coder",
   },
 ];
 
