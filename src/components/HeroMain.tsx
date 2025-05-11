@@ -43,7 +43,7 @@ const HeroMain = () => {
               <span className="text-coder-purple">Bihari</span>{" "}
               <span className="text-coder-blue">Coder</span>
             </h1>
-            <p className="text-gray-600 dark:text-gray-300 text-lg md:text-xl">
+            <p className="text-gray-600 dark:text-gray-300 text-lg md:text-xl text-justify">
               Kickstart your journey with{" "}
               <span className="font-semibold text-coder-blue">
                 real-world projects
@@ -67,7 +67,7 @@ const HeroMain = () => {
             </p>
 
             <div>
-              <p className="text-gray-600 dark:text-gray-300 text-lg md:text-xl mt-6 mb-4">
+              <p className="text-gray-600 dark:text-gray-300 text-lg md:text-xl mt-6 mb-4 text-justify">
                 🎀Subscribe to get the latest
                 <span className="font-semibold text-coder-orange">
                   {" "}
