@@ -5,6 +5,7 @@ import ProjectCard from "@/components/ProjectCard";
 import FooterMain from "@/components/FooterMain";
 import { Link } from "react-router-dom";
 import projects from "@/components/data/projectsdata"; // Importing centralized projects data
+import ReactGA from "react-ga4";
 
 const Home = () => {
   const [isHidden, setIsHidden] = useState(false); // State to track arrow visibility
@@ -35,12 +36,29 @@ const Home = () => {
     };
   }, []);
 
+  const handleButtonClick = () => {
+    ReactGA.event({
+      category: "User",
+      action: "Clicked Button",
+      label: "Home Page Button",
+    });
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       <NavbarMain />
 
       <main className="flex-grow">
         <HeroMain />
+
+        <div className="text-center my-8">
+          <button
+            onClick={handleButtonClick}
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          >
+            Click Me
+          </button>
+        </div>
 
         {/* Projects Section */}
         <section
