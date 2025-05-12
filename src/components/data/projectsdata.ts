@@ -91,6 +91,29 @@ const projects = [
     demoLink: "https://bihari-coder.vercel.app/",
     githubLink: "https://github.com/Sahil-Ali-01/Bihari-Coder",
   },
+  {
+    title: "Image Formate to PDF",
+    description:
+      "Convert JPG, JPEG, and PNG images to PDF format.",
+    image: "/images/image_to_pdf.png",
+    difficulty: "Beginner" as const,
+    tags: ["HTML", "CSS", "JavaScript"],
+    category: "HTML + CSS + JavaScript Projects",
+    demoLink: "https://image-to-pdf-converter-lime.vercel.app/",
+    githubLink: "https://github.com/Sahil-Ali-01/Image-to-pdf-converter",
+  },
+  // Uncomment the following project if you want to include it
+  // {
+  //   title: "Bihari Coder",
+  //   description:
+  //     "Bihari Coder – Empowering developers with real-world projects, stunning templates, and practical coding tutorials.",
+  //   image: "/images/biharicoder.png",
+  //   difficulty: "Advanced" as const,
+  //   tags: ["React", "Next.js", "Node.js", "TypeScript", "Tailwind CSS"],
+  //   category: "Full Stack Projects",
+  //   demoLink: "https://bihari-coder.vercel.app/",
+  //   githubLink: "https://github.com/Sahil-Ali-01/Bihari-Coder",
+  // },
 ];
 
 export default projects;
