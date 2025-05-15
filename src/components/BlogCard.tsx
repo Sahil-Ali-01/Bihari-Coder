@@ -1,4 +1,3 @@
-
 import { CalendarIcon, Clock } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
@@ -36,15 +35,17 @@ const BlogCard = ({ title, excerpt, date, readTime, category, image, slug }: Blo
         </div>
         
         <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
-          <a href={`/blog/${slug}`} className="hover:text-coder-purple transition-colors">
+          <a href={slug} target="_blank" rel="noopener noreferrer" className="hover:text-coder-purple transition-colors">
             {title}
           </a>
         </h3>
         
         <p className="text-gray-600 dark:text-gray-300 line-clamp-3 mb-4">{excerpt}</p>
-        
+
         <a 
-          href={`/blog/${slug}`}
+          href={slug} 
+          target="_blank" 
+          rel="noopener noreferrer" 
           className="inline-flex items-center text-coder-purple font-medium hover:underline"
         >
           Read Article
