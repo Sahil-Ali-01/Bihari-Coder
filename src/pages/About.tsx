@@ -173,14 +173,14 @@ const About = () => {
                   />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                  Jane Doe
+                  Sahil Ali
                 </h3>
                 <p className="text-coder-purple font-medium mb-4">
                   Founder & Lead Developer
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Full-stack developer with 8+ years of experience specializing
-                  in React and Node.js.
+                  Full-stack developer with 3+ years of experience specializing
+                  in React, Node.js., Java and Spring Boot
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a href="#" className="text-gray-500 hover:text-coder-purple">
