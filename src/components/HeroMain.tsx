@@ -44,19 +44,21 @@ const HeroMain = () => {
               <span className="text-coder-blue">Coder</span>
             </h1>
             <p className="text-gray-600 dark:text-gray-300 text-lg md:text-xl text-justify">
-              Kickstart your journey with{" "}
+              {" "}
+              Kickstart your journey wih
               <span className="font-semibold text-coder-blue">
-                real-world projects
+              {" "}
+              real-world projects
               </span>
               ,
               <span className="font-semibold text-coder-orange">
                 {" "}
-                stunning templates
+              stunning templates
               </span>
               , and
               <span className="font-semibold text-coder-purple">
                 {" "}
-                powerful blogs
+              powerful blogs
               </span>
               .
               <br />

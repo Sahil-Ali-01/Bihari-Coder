@@ -165,9 +165,9 @@ const About = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6">
+                <div className="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6 ">
                   <img
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop"
+                    src="/images/sahil-ali.jpg"
                     alt="Team Member"
                     className="w-full h-full object-cover"
                   />
@@ -183,19 +183,16 @@ const About = () => {
                   in React, Node.js., Java and Spring Boot
                 </p>
                 <div className="flex justify-center space-x-4">
-                  <a href="#" className="text-gray-500 hover:text-coder-purple">
+                  <a href="https://github.com/Sahil-Ali-01" target="_blank" className="text-gray-500 hover:text-coder-purple">
                     <Github className="h-5 w-5" />
                   </a>
-                  <a href="#" className="text-gray-500 hover:text-coder-blue">
-                    <Twitter className="h-5 w-5" />
-                  </a>
-                  <a href="#" className="text-gray-500 hover:text-coder-blue">
+                  <a href="https://www.linkedin.com/in/sahil189alig/" target="_blank" className="text-gray-500 hover:text-coder-blue">
                     <Linkedin className="h-5 w-5" />
                   </a>
                 </div>
               </div>
 
-              <div className="text-center">
+              {/* <div className="text-center">
                 <div className="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6">
                   <img
                     src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?q=80&w=2134&auto=format&fit=crop"
@@ -255,7 +252,7 @@ const About = () => {
                     <Linkedin className="h-5 w-5" />
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
