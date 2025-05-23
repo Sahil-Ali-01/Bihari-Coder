@@ -1,3 +1,5 @@
+import { title } from "process";
+
 const projects = [
   {
     title: "Task Manager API",
@@ -102,6 +104,17 @@ const projects = [
     demoLink: "https://image-to-pdf-converter-lime.vercel.app/",
     githubLink: "https://github.com/Sahil-Ali-01/Image-to-pdf-converter",
   },
+  {
+    title: "Maze Solver DFS Algorithm",
+    description:
+      "A maze solver that uses the Depth-First Search (DFS) algorithm to find a path through a maze.",
+    image: "/images/maze_solver.png",
+    difficulty: "Intermediate" as const,
+    tags: ["Java"],
+    category: "DSA + Java Projects",
+    demoLink: "https://github.com/Sahil-Ali-01/maze-solver-java.git",
+    githubLink: "https://github.com/Sahil-Ali-01/maze-solver-java.git",
+  }
   // Uncomment the following project if you want to include it
   // {
   //   title: "Bihari Coder",
