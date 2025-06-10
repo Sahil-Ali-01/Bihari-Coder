@@ -61,7 +61,16 @@ const blogData = [
     category: "Project",
     image: "./images/image_to_pdf.png",
     slug: "https://www.linkedin.com/pulse/building-simple-jpg-jpeg-png-pdf-converter-using-html-sahil-ali-qoygf/?trackingId=tqiSG4GmRKCJp6KgoXAmnw%3D%3D"
-  }
+  },
+  {
+    title: "Understanding HTTP Response:",
+    excerpt: "A comprehensive guide to HTTP response codes, their meanings, and how to handle them effectively in web applications.",
+    date: "Jun 10, 2025",
+    readTime: "4 min read",
+    category: "Project",
+    image: "./images/Http.png",
+    slug: "https://www.linkedin.com/pulse/understanding-http-response-complete-guide-sahil-ali-hgogf"
+  },
 ];
 
 export default blogData;
